@@ -1,0 +1,116 @@
+{
+  "ascii": [
+    "███╗   ██╗██╗██████╗ ██╗   ██╗███╗   ██╗",
+    "████╗  ██║██║██╔══██╗██║   ██║████╗  ██║",
+    "██╔██╗ ██║██║██████╔╝██║   ██║██╔██╗ ██║",
+    "██║╚██╗██║██║██╔═══╝ ██║   ██║██║╚██╗██║",
+    "██║ ╚████║██║██║     ╚██████╔╝██║ ╚████║",
+    "╚═╝  ╚═══╝╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝"
+  ],
+  "title": "The Matrix",
+  "username": "neo",
+  "hostname": "construct",
+  "password": "follow the white rabbit",
+  "repoLink": "https://github.com/superb-striker/portfolio",
+  "social": {
+    "email": "nipunkothari04@gmail.com",
+    "github": "superb-striker",
+    "linkedin": "nipun-kothari-10250a258/",
+    "resume": "https://drive.google.com/file/d/18WVVYwgQAr6HnatAg9zE3VU-vi2t4yAN/view"
+  },
+  "aboutGreeting": "You've reached Nipun Kothari. Senior @ IIITD — backend systems, data pipelines, the occasional rabbit hole.",
+  "projects": [
+    [
+      "Phantom Share",
+      "Secure secrets-sharing REST API with envelope encryption, Redis expiry, RBAC, and optional E2E encryption mode.",
+      "Python • FastAPI • PostgreSQL • Redis • Railway",
+      "https://github.com/superb-striker/phantom-share"
+    ],
+    [
+      "Log Guard",
+      "Event-driven log ingestion pipeline with Personal Info redaction, Dead Letter Queue handling, and webhook alerting.",
+      "Java • Spring Boot • RabbitMQ • PostgreSQL • Docker",
+      "https://github.com/superb-striker/log-guard"
+    ],
+    [
+      "Clock Work",
+      "React Native productivity app combining task management, Pomodoro focus, and note-taking with a relaxation game to replace doomscrolling.",
+      "TypeScript • React Native • Expo",
+      "https://github.com/superb-striker/clock-work"
+    ],
+    [
+      "Enhance It",
+      "Website to enhance low-resolution satellite imagery using a finetuned DRCT model.",
+      "Python • TypeScript • React • Computer Vision",
+      "https://github.com/superb-striker/ImageSuperResolutionCV"
+    ],
+    [
+      "Portrait Blur",
+      "GPU-accelerated portrait blur effect mimicking smartphone camera portrait mode.",
+      "Python • C++ • CUDA",
+      "https://github.com/superb-striker/gpu-portrait-blur"
+    ],
+    [
+      "Stick Hero",
+      "GUI-based platformer game",
+      "Java • JavaFX • JUnit • Maven",
+      "https://github.com/superb-striker/stickhero"
+    ]
+  ],
+  "experience": [
+    [
+      "GSPANN Technologies",
+      "Technical Intern — Application Development",
+      "Jan 2026 – Mar 2026",
+      [
+        "Developed 8+ Spring Boot REST APIs for product catalog management and deployed on AWS Elastic Beanstalk.",
+        "Extended the products PostgreSQL schema to support new catalog attributes.",
+        "Wrote unit and integration tests using JUnit and Mockito across service and repository layers.",
+        "Built React components consuming internal REST APIs, integrated with AWS S3 for asset management."
+      ]
+    ],
+    [
+      "Network Security Lab, IIITD",
+      "Software Engineering Intern",
+      "Aug 2024 – Jul 2025",
+      [
+        "Built Android testing framework integrating Google Play Integrity API across 5 device configurations.",
+        "Instrumented mobile apps using Frida to capture and analyze 100k+ API calls and network events.",
+        "Built LLM pipeline to detect undocumented data flows in 30% of tested payment apps."
+      ]
+    ],
+    [
+      "Circuit & Innovation Lab",
+      "Summer Software Intern",
+      "Jul 2023 - Aug 2023",
+      [
+        "Built automated inventory system via Google Apps Script, achieving 100% data accuracy.",
+        "Integrated Google Forms, Sheets, and Gmail APIs for real-time sync, cutting overhead by 90%.",
+        "Automated hardware workflows with rule-based alerts, saving 5+ hours/week."
+      ]
+    ]
+  ],
+  "colors": {
+    "background": "#000000",
+    "foreground": "#00FF41",
+    "banner": "#00FF41",
+    "border": {
+      "visible": true,
+      "color": "#003B00"
+    },
+    "prompt": {
+      "default": "#008F11",
+      "user": "#00FF41",
+      "host": "#00C800",
+      "input": "#00FF41"
+    },
+    "link": {
+      "text": "#00FF41",
+      "highlightColor": "#00FF41",
+      "highlightText": "#000000"
+    },
+    "commands": {
+      "textColor": "#00FF41"
+    }
+  }
+}
