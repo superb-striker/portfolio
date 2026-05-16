@@ -27,6 +27,12 @@
       "https://github.com/superb-striker/phantom-share"
     ],
     [
+      "DocQuery",
+      "RAG pipeline to query any OpenAPI spec in plain English; combines keyword and semantic search with hallucination safeguards.",
+      "Python • FastAPI • React • ChromaDB • HuggingFace • Groq",
+      "https://github.com/superb-striker/DocQuery"
+    ],
+    [
       "Log Guard",
       "Event-driven log ingestion pipeline with Personal Info redaction, Dead Letter Queue handling, and webhook alerting.",
       "Java • Spring Boot • RabbitMQ • PostgreSQL • Docker",
