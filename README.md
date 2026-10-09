@@ -1,46 +1,37 @@
-# Construct
+# Nipun Kothari — Portfolio
 
-> *"Unfortunately, no one can be told what the Matrix is. You have to see it for yourself."*
+A systems-inspired developer portfolio with two ways in:
 
-A terminal-based developer portfolio inspired by The Matrix. Built with vanilla TypeScript - no frameworks.
+- **Visual mode** — an editorial overview of selected work, experience, capabilities, and contact details.
+- **Terminal mode** — the original interactive Matrix-inspired terminal, preserved at `/terminal/` with commands and easter eggs intact.
+
+Built with vanilla TypeScript, semantic HTML, and CSS. No UI framework or component library.
 
 **Live:** https://superb-striker.github.io/portfolio/
 
----
-
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| `about` | Display identity file |
-| `projects` | Access project records |
-| `experience` | Access employment records |
-| `whoami` | Query current consciousness |
-| `redpill` | Reveal the truth |
-| `bluepill` | Return to illusion |
-| `sudo` | Escalate your privileges |
-| `repo` | Open source repository |
-| `banner` | Reinitialize terminal |
-| `clear` | Wipe the screen |
-
-**Tab** : autocomplete &nbsp;|&nbsp; **↑↓** : command history &nbsp;|&nbsp; **Esc** : clear input
-
----
-
-## Run Locally
+## Run locally
 
 ```bash
-```bash
-git clone https://github.com/superb-striker/portfolio
-cd portfolio
 npm install
 npm run dev
 ```
 
-## Configure
+Vite prints the local URL. Open `/` for the visual portfolio or `/terminal/` for the terminal.
 
-All content — projects, experience, colors, social links — lives in `config.json`. No code changes needed to update portfolio content.
+## Content
 
----
+Projects, experience, social links, and terminal colors live in `config.json`. Both portfolio modes read from this shared source.
 
-*Follow the white rabbit.*
+## Commands
+
+```bash
+npm run build    # type-check and create the production build
+npm run preview  # serve the production build locally
+npm run deploy   # publish dist/ to GitHub Pages
+```
+
+## Terminal commands
+
+`about`, `projects`, `experience`, `whoami`, `redpill`, `bluepill`, `sudo`, `repo`, `banner`, and `clear`.
+
+Tab completes commands, the arrow keys browse command history, and Escape clears the current input.

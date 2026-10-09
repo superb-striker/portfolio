@@ -1,45 +1,45 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById("matrix-rain") as HTMLCanvasElement;
-  if (!canvas) return;
+const canvas = document.getElementById('matrix-rain') as HTMLCanvasElement | null;
+const context = canvas?.getContext('2d');
 
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const letters =
-    "アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+if (canvas && context) {
+  const glyphs = 'アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const fontSize = 16;
-  const columns = Math.floor(canvas.width / fontSize);
+  let columns = 0;
+  let drops: number[] = [];
+  let animationFrame = 0;
+  let lastFrame = 0;
 
-  const drops: number[] = new Array(columns).fill(1);
+  const resize = () => {
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(window.innerWidth * ratio);
+    canvas.height = Math.floor(window.innerHeight * ratio);
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    columns = Math.ceil(window.innerWidth / fontSize);
+    drops = Array.from({ length: columns }, () => Math.floor(Math.random() * -40));
+  };
 
-  function draw() {
-    console.log("drawing");
-    ctx!.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx!.fillRect(0, 0, canvas.width, canvas.height);
+  const draw = (time: number) => {
+    animationFrame = window.requestAnimationFrame(draw);
+    if (document.hidden || time - lastFrame < 45) return;
+    lastFrame = time;
 
-    ctx!.fillStyle = "#00FF41";
-    ctx!.font = fontSize + "px monospace";
+    context.fillStyle = 'rgba(0, 0, 0, 0.08)';
+    context.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    context.fillStyle = '#00ff41';
+    context.font = `${fontSize}px monospace`;
 
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-      ctx!.fillText(text, i * fontSize, drops[i] * fontSize);
+    drops.forEach((drop, index) => {
+      const glyph = glyphs[Math.floor(Math.random() * glyphs.length)];
+      context.fillText(glyph, index * fontSize, drop * fontSize);
+      if (drop * fontSize > window.innerHeight && Math.random() > 0.977) drops[index] = 0;
+      else drops[index] += 1;
+    });
+  };
 
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-
-      drops[i]++;
-    }
-  }
-
-  setInterval(draw, 35);
-
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-});
+  resize();
+  animationFrame = window.requestAnimationFrame(draw);
+  window.addEventListener('resize', resize, { passive: true });
+  window.addEventListener('pagehide', () => window.cancelAnimationFrame(animationFrame), { once: true });
+}

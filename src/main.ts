@@ -414,9 +414,8 @@ const initEventListeners = () => {
     writeLines(BANNER);
   });
   
-  USERINPUT.addEventListener('keypress', userInputHandler);
   USERINPUT.addEventListener('keydown', userInputHandler);
-  PASSWORD_INPUT.addEventListener('keypress', userInputHandler);
+  PASSWORD_INPUT.addEventListener('keydown', userInputHandler);
 
   window.addEventListener('click', () => {
     USERINPUT.focus();
